@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "mmapi.h"
 
-// Set this!
-#define APIKEY @"YOURAPIKEY"
-#define APIBASE @"http://api.musixmatch.com/ws/1.0/"
+
+#define APIBASE @"http://api.musixmatch.com/ws/1.1/"
 #define APIFORMAT @"json"
 
 #define USER_AGENT @"MusiXmatchObjC/1.0"

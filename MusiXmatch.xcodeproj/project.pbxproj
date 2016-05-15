@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160775D31CE8AD63009C961D /* mmapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 160775D21CE8AD63009C961D /* mmapi.h */; };
 		3070D40D1250AD9200676020 /* libMusiXmatch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libMusiXmatch.a */; };
 		3070D4111250ADB400676020 /* MusiXmatchService.h in Headers */ = {isa = PBXBuildFile; fileRef = 3070D40F1250ADB400676020 /* MusiXmatchService.h */; };
 		3070D4121250ADB400676020 /* MusiXmatchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3070D4101250ADB400676020 /* MusiXmatchService.m */; };
@@ -36,6 +37,7 @@
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		160775D21CE8AD63009C961D /* mmapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mmapi.h; path = mmapi.h; sourceTree = "<group>"; };
 		3070D4091250AD7F00676020 /* TestDriver */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestDriver; sourceTree = BUILT_PRODUCTS_DIR; };
 		3070D40F1250ADB400676020 /* MusiXmatchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusiXmatchService.h; path = Classes/MusiXmatchService.h; sourceTree = "<group>"; };
 		3070D4101250ADB400676020 /* MusiXmatchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusiXmatchService.m; path = Classes/MusiXmatchService.m; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		0867D691FE84028FC02AAC07 /* MusiXmatch */ = {
 			isa = PBXGroup;
 			children = (
+				160775D21CE8AD63009C961D /* mmapi.h */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
@@ -172,6 +175,7 @@
 				3070D4111250ADB400676020 /* MusiXmatchService.h in Headers */,
 				3070D4181250B11700676020 /* SZJsonParser.h in Headers */,
 				3070D4351250B40E00676020 /* Artist.h in Headers */,
+				160775D31CE8AD63009C961D /* mmapi.h in Headers */,
 				3070D43E1250B59100676020 /* Track.h in Headers */,
 				3070D4D21250C57D00676020 /* NSString+Extensions.h in Headers */,
 			);
