@@ -94,8 +94,8 @@ static MusiXmatchService *sharedInstance = nil;
 
 
 - (NSArray*)trackSearch:(NSString *)query numResults:(NSUInteger)numResults {
-	NSString *url = [NSString stringWithFormat:@"%@&q=%@&page_size=%u&f_has_lyrics=1",
-					 [self baseUrl:TRACK_SEARCH], [query URLEncoded], numResults];
+    NSString *url = [NSString stringWithFormat:@"%@&q=%@&page_size=%lu&f_has_lyrics=1",
+                     [self baseUrl:TRACK_SEARCH], [query URLEncoded], (unsigned long)numResults];
 	return [self trackSearch:url];
 }
 
@@ -112,8 +112,8 @@ static MusiXmatchService *sharedInstance = nil;
 
 
 - (NSString*)getLyrics:(NSUInteger)lyricsId {
-	NSString *url = [[NSString alloc] initWithFormat:@"%@&lyrics_id=%u",
-						[self baseUrl:LYRICS_GET], lyricsId];
+    NSString *url = [[NSString alloc] initWithFormat:@"%@&lyrics_id=%lu",
+                     [self baseUrl:LYRICS_GET], (unsigned long)lyricsId];
 	NSDictionary *body = [self performQuery:url];
 	[url release];
 	if (!body) {
@@ -128,8 +128,8 @@ static MusiXmatchService *sharedInstance = nil;
 
 
 - (Track*)getTrack:(NSUInteger)trackId {
-	NSString *url = [[NSString alloc] initWithFormat:@"%@&track_id=%u",
-					 [self baseUrl:TRACK_GET], trackId];
+    NSString *url = [[NSString alloc] initWithFormat:@"%@&track_id=%lu",
+                     [self baseUrl:TRACK_GET], (unsigned long)trackId];
 	NSDictionary *body = [self performQuery:url];
 	NSDictionary *dict = [[body objectForKey:@"track_list"] objectForKey:@"track"];
 	Track *track = [[Track alloc] initWithDictionary:dict];
@@ -173,7 +173,7 @@ static MusiXmatchService *sharedInstance = nil;
     return UINT_MAX;  // denotes an object that cannot be released
 }
 
-- (void)release {
+- (oneway void)release {
     //do nothing
 }
 

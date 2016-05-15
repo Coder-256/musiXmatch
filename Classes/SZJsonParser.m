@@ -200,7 +200,7 @@
     BOOL isEscaped = NO;
     while ([self hasMoreCharacters]) {
         unichar c = [self getNextCharacter];
-        if (!isEscaped && (stringEdgeType == 0 && c == '"' || stringEdgeType == 1 && c == '\'')) {
+        if (!isEscaped && ((stringEdgeType == 0 && c == '"') || (stringEdgeType == 1 && c == '\''))) {
             break;
         }
         if (!isEscaped) {
@@ -231,7 +231,7 @@
                 NSScanner *scanner = [NSScanner scannerWithString:fourHexDigits];
                 unsigned charCode;
                 if ([scanner scanHexInt:&charCode]) {
-                    [ret appendFormat:@"%C", charCode];
+                    [ret appendFormat:@"%C", (unichar)charCode];
                 } else {
                     @throw [NSException exceptionWithName:@"JSON Parsing Error"
                                                    reason:[NSString stringWithFormat:@"Illegal unicode character (u%@).", fourHexDigits]
